@@ -94,7 +94,7 @@ let randomInterval;
             row.cells[row.cells.length - 1].textContent = score;
         }
 
-        function showCategorySuggestions() {
+        function showCategorySuggestions(event) {
             const suggestions = document.getElementById('categorySuggestions');
             const button = event.target;
             const buttonRect = button.getBoundingClientRect();
