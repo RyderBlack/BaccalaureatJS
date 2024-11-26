@@ -94,9 +94,20 @@ let randomInterval;
             row.cells[row.cells.length - 1].textContent = score;
         }
 
-        function showCategorySuggestions(event) {
+        document.body.addEventListener('click', function(event) {
+            if (event.target.id === 'categoryButton') {
+                showCategorySuggestions(event);
+            }
+            // Or, if you have multiple buttons with a class
+            if (event.target.classList.contains('category-button')) {
+                showCategorySuggestions(event);
+            }
+        });
+
+        function showCategorySuggestions() {
+            
             const suggestions = document.getElementById('categorySuggestions');
-            const button = event.target;
+            const button = document.getElementById('showCat');
             const buttonRect = button.getBoundingClientRect();
             
             suggestions.style.top = `${buttonRect.bottom + window.scrollY + 5}px`;
