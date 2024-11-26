@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baccalauréat De RyRy</title>
+
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="container">
+
+    <div class="controls">
+        <button onclick="addColumn()">Ajouter une colonne</button>
+        <button onclick="startLetterRandomizer()">Randomizer</button>
+        <button onclick="stopRandomizer()" id="stopBtn" disabled>Stop</button>
+        <button onclick="showCategorySuggestions()">Suggestions de catégories</button>
+    </div>
+
+    <div class="letter-display" id="letterDisplay">A</div>
+
+    <table class="game-table" id="gameTable">
+        <thead>
+            <tr id="headerRow">
+                <th>
+                    <span class="column-header">Catégorie</span>
+                    <span class="delete-column" onclick="deleteColumn(this)">×</span>
+                </th>
+                <th>
+                    <span class="column-header">Score</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="inputRow">
+                <td contenteditable="true"></td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="category-suggestions" id="categorySuggestions">
+        <p onclick="addSuggestedCategory('Prénom Garçon')">Prénom</p>
+        <p onclick="addSuggestedCategory('Prénom Fille')">Prénom</p>
+        <p onclick="addSuggestedCategory('Pays')">Pays</p>
+        <p onclick="addSuggestedCategory('Ville')">Ville</p>
+        <p onclick="addSuggestedCategory('Métier')">Métier</p>
+        <p onclick="addSuggestedCategory('Animal')">Animal</p>
+        <p onclick="addSuggestedCategory('Fruit/Légume')">Fruit/Légume</p>
+        <p onclick="addSuggestedCategory('Marque')">Marque</p>
+        <p onclick="addSuggestedCategory('Célébrité')">Célébrité</p>
+    </div>
+
+    <script src="./script.js"></script>
+    </div>
+</body>
+</html>

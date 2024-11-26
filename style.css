@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.randomizer {
+    margin-bottom: 20px;
+}
+
+#randomLetterDisplay {
+    font-size: 2em;
+    margin: 0 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+#categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.category {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100px;
+    position: relative;
+}
+
+.category span {
+    display: block;
+    cursor: pointer;
+}
+
+.crossed {
+    text-decoration: line-through;
+}
+
+.suggestions {
+    margin: 20px 0;
+}
+
+.suggestions button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#playerCount {
+    margin-top: 20px;
+}
